@@ -7,11 +7,72 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/fahrenheitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:tag="fahrenheitLabel"
+        android:text="@string/fahrenheit_label"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/celsiusLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="267dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/celsiusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="celsiusLabel"
+        android:text="@string/celsius_label"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/convertButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheitLabel" />
+
+    <EditText
+        android:id="@+id/fahrenheitInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/fahrenheit_input_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:tag="fahrenheitInput"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fahrenheitLabel"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/celsiusInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/celsius_input_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:tag="celsiusInput"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/celsiusLabel"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:tag="convertButton"
+        android:text="@string/convert_button_label"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

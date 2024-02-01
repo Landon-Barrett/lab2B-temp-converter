@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CS 408 Lab2B Temp Converter</string>
+    <string name="fahrenheit_label">Fahrenheit:</string>
+    <string name="celsius_label">Celsius:</string>
+    <string name="convert_button_label">Convert</string>
+    <string name="fahrenheit_input_hint">Enter Fahrenheit..</string>
+    <string name="celsius_input_hint">Enter Celsius..</string>
 </resources>
